@@ -1,26 +1,27 @@
-##Descarga la imagen 'httpd' y comprueba que está en tu equipo.
-sudo docker run httpd (para descargarla)
+## Descarga la imagen 'httpd' y comprueba que está en tu equipo.
+sudo docker pull httpd (para descargarla)
 sudo docker images (para verlas)
 
-##Crea un contenedor con el nombre 'dam_web1'.
+## Crea un contenedor con el nombre 'dam_web1'.
 sudo docker run -it --name dam_web1 httpd
 
-##Si quieres poder acceder desde el navegador de tu equipo, ¿que debes hacer?
+## Si quieres poder acceder desde el navegador de tu equipo, ¿que debes hacer?
+Borrar el contenedor de docker, y ejecutar el siguiente comando:
+sudo docker run -it -p 80:80 --name dam_web1 httpd
+
+## Utiliza bind mount para que el directorio del apache2 'htdocs' esté montado un directorio que tu elijas.
 
 
-##Utiliza bind mount para que el directorio del apache2 'htdocs' esté montado un directorio que tu elijas.
+## Realiza un 'hola mundo' en html y comprueba que accedes desde el navegador.
 
 
-##Realiza un 'hola mundo' en html y comprueba que accedes desde el navegador.
+## Crea otro contenedor 'dam_web2' con el mismo bind mount y a otro puerto, por ejemplo 9080.
 
 
-##Crea otro contenedor 'dam_web2' con el mismo bind mount y a otro puerto, por ejemplo 9080.
-
-
-##Comprueba que los dos servidores 'sirven' la misma página, es decir, cuando consultamos en el navegador:
+## Comprueba que los dos servidores 'sirven' la misma página, es decir, cuando consultamos en el navegador:
         http://localhost:9080 
         http://localhost:8000
 
 
-##Realiza modificaciones de la página y comprueba que los dos servidores 'sirven' la misma página
+## Realiza modificaciones de la página y comprueba que los dos servidores 'sirven' la misma página
 
