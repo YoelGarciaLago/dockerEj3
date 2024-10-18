@@ -21,7 +21,7 @@ sudo docker run -d --name dam_web2 -p 9080:80 -v /home/accesodatos/Escritorio/wa
 ## Comprueba que los dos servidores 'sirven' la misma página, es decir, cuando consultamos en el navegador:
         http://localhost:9080 
         http://localhost:8000
-
+Se pueden ver las dos direcciones en el navegador.
 
 ## Realiza modificaciones de la página y comprueba que los dos servidores 'sirven' la misma página
-
+Los servidores sirven
